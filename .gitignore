@@ -2,10 +2,18 @@
 .env
 .env.*
 !.env.example
+.env.backup
+.env.local
 
 # Vendor / dependencies
 /vendor/
 /node_modules/
+
+# Node/npm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Build output
 /public/hot
@@ -16,6 +24,7 @@
 
 # Storage
 /storage/*.key
+/storage/*.log
 /storage/logs/*
 /storage/framework/cache/*
 /storage/framework/cache/data/*
@@ -38,6 +47,8 @@ phpunit.xml.cache
 /.idea/
 *.sublime-workspace
 *.sublime-project
+*.phpstorm.meta.php
+/.phpintel/
 
 # OS files
 .DS_Store
@@ -48,8 +59,10 @@ desktop.ini
 *~
 *.swp
 *.swo
+.#*
+._*
 
 # Misc
-.env.backup
-.env.local
 *.log
+*.sql
+*.sqlite
