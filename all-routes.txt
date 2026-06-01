@@ -1,0 +1,87 @@
+
+  GET|HEAD        / ........................................ routes/web.php:30
+  GET|HEAD        Admin/user .......... user.index › User\UserController@index
+  POST            Admin/user .......... user.store › User\UserController@store
+  GET|HEAD        Admin/user/create . user.create › User\UserController@create
+  GET|HEAD        Admin/user/{user} ..... user.show › User\UserController@show
+  PUT|PATCH       Admin/user/{user} . user.update › User\UserController@update
+  DELETE          Admin/user/{user} user.destroy › User\UserController@destroy
+  GET|HEAD        Admin/user/{user}/edit user.edit › User\UserController@edit
+  GET|HEAD        Stock .......... Stock.index › StockMovementController@index
+  POST            Stock .......... Stock.store › StockMovementController@store
+  GET|HEAD        Stock/create . Stock.create › StockMovementController@create
+  GET|HEAD        Stock/{Stock} .... Stock.show › StockMovementController@show
+  PUT|PATCH       Stock/{Stock} Stock.update › StockMovementController@update
+  DELETE          Stock/{Stock} Stock.destroy › StockMovementController@destr…
+  GET|HEAD        Stock/{Stock}/edit Stock.edit › StockMovementController@edit
+  GET|HEAD        Unit ..................... Unit.index › UnitController@index
+  POST            Unit ..................... Unit.store › UnitController@store
+  GET|HEAD        Unit/create ............ Unit.create › UnitController@create
+  GET|HEAD        Unit/{Unit} ................ Unit.show › UnitController@show
+  PUT|PATCH       Unit/{Unit} ............ Unit.update › UnitController@update
+  DELETE          Unit/{Unit} .......... Unit.destroy › UnitController@destroy
+  GET|HEAD        Unit/{Unit}/edit ........... Unit.edit › UnitController@edit
+  POST            _ignition/execute-solution ignition.executeSolution › Spati…
+  GET|HEAD        _ignition/health-check ignition.healthCheck › Spatie\Larave…
+  POST            _ignition/update-config ignition.updateConfig › Spatie\Lara…
+  GET|HEAD        admin/reports/daily . reports.daily › ReportController@daily
+  GET|HEAD        admin/reports/products reports.products › ReportController@…
+  GET|HEAD        admin/reports/profit reports.profit › ReportController@prof…
+  GET|HEAD        api/user ................................. routes/api.php:17
+  GET|HEAD        categories ....... category.index › CategoryController@index
+  POST            categories ....... category.store › CategoryController@store
+  PATCH           categories/{category} category.update › CategoryController@…
+  DELETE          categories/{category} category.destroy › CategoryController…
+  GET|HEAD        confirm-password password.confirm › Auth\ConfirmablePasswor…
+  POST            confirm-password .. Auth\ConfirmablePasswordController@store
+  GET|HEAD        customer ......... customer.index › CustomerController@index
+  POST            customer ......... customer.store › CustomerController@store
+  GET|HEAD        customer/create customer.create › CustomerController@create
+  GET|HEAD        customer/{customer} customer.show › CustomerController@show
+  PUT|PATCH       customer/{customer} customer.update › CustomerController@up…
+  DELETE          customer/{customer} customer.destroy › CustomerController@d…
+  GET|HEAD        customer/{customer}/edit customer.edit › CustomerController…
+  GET|HEAD        dashboard ............ dashboard › DashboardController@index
+  POST            email/verification-notification verification.send › Auth\Em…
+  GET|HEAD        forgot-password password.request › Auth\PasswordResetLinkCo…
+  POST            forgot-password password.email › Auth\PasswordResetLinkCont…
+  GET|HEAD        login ... login › Auth\AuthenticatedSessionController@create
+  POST            login ............ Auth\AuthenticatedSessionController@store
+  POST            logout logout › Auth\AuthenticatedSessionController@destroy
+  GET|HEAD        offers ................ offers.index › OfferController@index
+  POST            offers ................ offers.store › OfferController@store
+  GET|HEAD        offers/create ....... offers.create › OfferController@create
+  GET|HEAD        offers/{offer} .......... offers.show › OfferController@show
+  PUT|PATCH       offers/{offer} ...... offers.update › OfferController@update
+  DELETE          offers/{offer} .... offers.destroy › OfferController@destroy
+  GET|HEAD        offers/{offer}/edit ..... offers.edit › OfferController@edit
+  PUT             password .. password.update › Auth\PasswordController@update
+  GET|HEAD        product ............ product.index › ProductController@index
+  POST            product ............ product.store › ProductController@store
+  GET|HEAD        product/child-categories/{parentId} product.child-categorie…
+  GET|HEAD        product/create ... product.create › ProductController@create
+  GET|HEAD        product/{product} .... product.show › ProductController@show
+  PUT|PATCH       product/{product} product.update › ProductController@update
+  DELETE          product/{product} product.destroy › ProductController@destr…
+  GET|HEAD        product/{product}/edit product.edit › ProductController@edit
+  GET|HEAD        profile .............. profile.edit › ProfileController@edit
+  PATCH           profile .......... profile.update › ProfileController@update
+  DELETE          profile ........ profile.destroy › ProfileController@destroy
+  GET|HEAD        register ... register › Auth\RegisteredUserController@create
+  POST            register ............... Auth\RegisteredUserController@store
+  POST            reset-password password.store › Auth\NewPasswordController@…
+  GET|HEAD        reset-password/{token} password.reset › Auth\NewPasswordCon…
+  GET|HEAD        sales ................... sales.index › SaleController@index
+  POST            sales ................... sales.store › SaleController@store
+  GET|HEAD        sales/create .......... sales.create › SaleController@create
+  GET|HEAD        sales/history ....... sales.history › SaleController@history
+  GET|HEAD        sales/{sale} .............. sales.show › SaleController@show
+  PUT|PATCH       sales/{sale} .......... sales.update › SaleController@update
+  DELETE          sales/{sale} ........ sales.destroy › SaleController@destroy
+  GET|HEAD        sales/{sale}/edit ......... sales.edit › SaleController@edit
+  GET|HEAD        sanctum/csrf-cookie sanctum.csrf-cookie › Laravel\Sanctum  …
+  GET|HEAD        verify-email verification.notice › Auth\EmailVerificationPr…
+  GET|HEAD        verify-email/{id}/{hash} verification.verify › Auth\VerifyE…
+
+                                                           Showing [83] routes
+
