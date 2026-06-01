@@ -66,3 +66,19 @@ desktop.ini
 *.log
 *.sql
 *.sqlite
+
+# Local generated test / diff output
+all-routes.txt
+auth-routes.txt
+clearlog.txt
+diff_*.txt
+files.txt
+migrate-*.txt
+phpunit-*.txt
+register-routes.txt
+route-*.txt
+test-*.txt
+upgrade-log.txt
+pkg.txt
+
+temp_laravel_12/
