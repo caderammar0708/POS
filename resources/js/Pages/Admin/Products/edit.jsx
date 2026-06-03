@@ -6,21 +6,21 @@ import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import { useState, useEffect } from 'react';
 
-export default function Edit({ auth, product, parentCategories, allCategories }) {
+export default function Edit({ auth, product, parentCategories, allCategories, units }) {
     const [childCategories, setChildCategories] = useState([]);
     const [selectedParent, setSelectedParent] = useState('');
-    
+
     // Find the current category and its parent
     const currentCategory = allCategories.find(cat => cat.id === product.category_id);
     const initialParentId = currentCategory?.parent_id || '';
-    
+
     useEffect(() => {
         if (initialParentId) {
             setSelectedParent(initialParentId);
             loadChildrenCategories(initialParentId);
         }
     }, [initialParentId]);
-    
+
     const loadChildrenCategories = async (parentId) => {
         if (parentId) {
             try {
@@ -35,7 +35,7 @@ export default function Edit({ auth, product, parentCategories, allCategories })
             setChildCategories([]);
         }
     };
-    
+
     const handleParentChange = async (parentId) => {
         setSelectedParent(parentId);
         setData('category_id', ''); // Reset category selection
@@ -44,6 +44,8 @@ export default function Edit({ auth, product, parentCategories, allCategories })
     const { data, setData, post, processing, errors } = useForm({
         name: product.name,
         category_id: product.category_id,
+        unit_id: product.unit_id || '',
+        cost_price: product.cost_price || '',
         price: product.price,
         stock: product.stock,
         image: null, // We keep this null unless a new file is picked
@@ -98,7 +100,7 @@ export default function Edit({ auth, product, parentCategories, allCategories })
                                     ))}
                                 </select>
                             </div>
-                            
+
                             {selectedParent && (
                                 <div>
                                     <InputLabel htmlFor="category" value="Sub-Category" />
@@ -138,6 +140,21 @@ export default function Edit({ auth, product, parentCategories, allCategories })
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
+                                {/* Cost Price */}
+                                <div>
+                                    <InputLabel htmlFor="cost_price" value="Cost Price ($)" />
+                                    <TextInput
+                                        id="cost_price"
+                                        type="number"
+                                        step="0.01"
+                                        value={data.cost_price}
+                                        className="mt-1 block w-full"
+                                        onChange={(e) => setData('cost_price', e.target.value)}
+                                        required
+                                    />
+                                    <InputError message={errors.cost_price} className="mt-2" />
+                                </div>
+
                                 {/* Price */}
                                 <div>
                                     <InputLabel htmlFor="price" value="Price ($)" />
